@@ -1,7 +1,18 @@
-編集後は以下の手順でgithubにアップロード？できる
 
+//編集後は以下の手順でgithubにアップロード？できる
 1. git add ./*
 2. git commit -m "------"
 3. git push origin --all
 
+
+//ファイル削除方法
+1. git rm [remove file name]
+2. git add./*
+3. git commit -m "-----"
+4. git push origin --all
+
+
+
+//memo
+commit時のコメントは何かしらの文字が必要
 
