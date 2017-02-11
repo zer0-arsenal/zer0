@@ -1,0 +1,6 @@
+import sys
+
+takelist = sys.argv[1:]
+
+takelist.sort()
+print(takelist)

@@ -6,3 +6,12 @@ address_def.py
 janken/
 	pythonのrandom関数を使ったスクリプトがあるディレクトリ
 	python入門書の練習用スクリプト
+
+timedate/
+	pythonのtimedateモジュールを使ったスクリプトがあるディレクトリ
+	python入門書の練習用スクリプト
+
+words_sort/
+	listのsortを使ったスクリプトがあるディレクトリ
+	python入門書の練習用スクリプト
+
