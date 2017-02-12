@@ -1,3 +1,4 @@
+# coding:utf-8
 
 # パターン1
 ipaddr = "0.0.0.0"
@@ -29,3 +30,24 @@ if ipaddr_len == 2:
     netmask = ipaddr_list[1]
     ipaddr = ipaddr_list[0]
 
+# パターン3
+import sys
+
+sys = sys.argv[1:]
+len1 = len(sys)
+
+if len1 == 0:
+    ipaddr = raw_input("ipaddr   = :")
+    netmask = raw_input("netmask = :")
+
+elif len1 == 1:
+    ipaddr_list = sys.split("/")
+    ipaddr = ipaddr_list[0]
+    netmask = ipaddr_list[1]
+
+elif len1 == 2:
+    ipaddr = sys[1]
+    netmask = sys[2]
+
+else:
+    print("error!!!!!!1111")

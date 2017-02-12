@@ -1,0 +1,13 @@
+
+* if文
+
+import datetime
+today = datetime.datetime.now()
+if today.weekday() < 5: ←コロンを入力して、以下はタブで字下げ
+   print("aaaaa") ←条件式が成立しないときはこのコードはスキップされる
+
+today.weekday() < 5 →この条件式が成立すると下に続くブロックのコードが実行される
+
+else:英語で「その他」という意味
+
+ifとelseは1つしか記述できないが、elifはいくとも続けてかける

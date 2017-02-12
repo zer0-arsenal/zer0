@@ -1,0 +1,33 @@
+
+* while
+
+random.randint(n1,n2)
+	- 2つの引数をとり、n1が最小n2が最大でn1からn2の間でランダムな値を返す
+
+whileは条件式が成立している間ずっと繰り返される
+
+import rnadom
+rand_num = 0
+while rand_num != 4:
+    rand_num = random.randint(0,9)
+    print(rand_num)
+「rand_num != 4」が成立している間(Trueを返す間)はずっと処理が続く
+
+
+#パターン2
+while True:
+    rand_num = random.randint(0,9)
+    print(rand_num)
+    if rand_num != 4:
+        continue
+    else:
+        break
+
+continueとbreakは繰り返し処理のブロックの中でifと合わせて使われる
+
+continue
+	ブロックの中にある以降のコードをすべて無視し、繰り返しの先頭に戻る
+
+break
+	以降のコードを無視して繰り返し処理を強制終了する
+

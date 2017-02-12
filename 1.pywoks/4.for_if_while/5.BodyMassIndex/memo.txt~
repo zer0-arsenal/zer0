@@ -1,0 +1,15 @@
+
+* BMI(Body Mass Index)
+
+BIM(Body Mass Index)値とは、国際的に使われている肥満度は表す数値
+BIM = 体重(Kg)/身長(m^2)
+
+国ごとに標準値は異なるが日本は22
+
+スクリプトの中で日本語を使う際は冒頭に以下の文字コード指定が必要
+(コメントだけに日本語を使う際も必要)
+- windows系の場合
+  # coding:shift-jis
+- macosの場合(linuxも)
+  # coding:utf-8
+
