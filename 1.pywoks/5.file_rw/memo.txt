@@ -1,0 +1,67 @@
+
+# ファイルオブジェクトの用意
+
++ ファイルを用意するには組み込み関数「opne」を使用
++ 必要な引数は2つ
+  + 1つ目は「ファイル名」
+  + 2つ目の引数で書き込みのためのファイルを用意することをpythonに伝える
+    + w = 書き込み r = 読み込み
+    + ex:書き込み)test_file = open("test.txt","w")
+    + ex:読み込み)test_file = open("tset.txt","w")
+
++ ファイルへの書き込みはファイル型オブジェクトが持っている「write」というメソッドを使用
++ writeメソッドは引数で指定された文字列をそのままファイルに書き込む
+  + 変数.write("[文字列]")だけだとまだファイルに書き込まれていない
+  + flushメソッドでファイルに反映？？
+    + flushメソッドはホースの中にある？のを無理やり吐き出させる？念の為に使用するっぽい
+  + closeメソッドでファイルとの接続を解除され、書き込んだ内容が反映される
+
+```
+>>> test_file = open("test.txt","w")
+>>> test_file.write("Hello!")
+>>> test_file.flush
+<built-in method flush of file object at 0x7f1eed669ae0>
+>>> test_file.close()
+```
+
+
++ ファイル内容を行ごとに読み込むのは「reatline()メソッド」
+>>> test_file = open("test.txt","r")
+>>> test_file
+<open file 'test.txt', mode 'r' at 0x7f1eed669b70>
+>>> reat_str = test_file.readline()
+>>> reat_str
+'Hello!'
+>>> 
+>>> test_file.close()
+>>> print(reat_str)
+Hello!
+>>> 
+
++ ファイル内容を複数行読み込むのは「readlines()」
+  + 1行ごとに読み込んだものをリストに格納する
+
++ 文字列に混在している制御文字を取り除くには「stripメソッド」
+
++ writelinesメソッドでリストになっているデータを一度に書き込める
+
+# for文を使った読み込み
++ pythonではファイルの行ごとの操作をfor文で簡単にかける
+```
+>>> test_file = open("test3.txt","r")
+>>> for line in test_file:
+...     print(line.strip())
+... 
+1,2,3
+4,5,6
+7,8,9
+>>> 
+```
+
++ joinメソッドはリスト、タプルを引数にとって、すべての要素の間に文字列を挿入して連結してくれる
+```
+>>> "-".join(["a","b","c"])
+'a-b-c'
+>>> 
+
+
