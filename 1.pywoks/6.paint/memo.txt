@@ -1,0 +1,17 @@
+
+import turtle #apt-get install python-tkが必要
+
+kame = turtle.Turtle() #別窓でGUIが出てくる
+
+kame.shape("turtle")
+# 矢印が亀になる
+# "arrow","turtle","circle","square","triangle","classic"が使用可能
+
+for i in range(3):
+    kame.forward(200)
+    kame.left(120)
+
+# 200進んで120左に回転を３回繰り返す
+
+正六角形 = 120 * 6 = 720
+
